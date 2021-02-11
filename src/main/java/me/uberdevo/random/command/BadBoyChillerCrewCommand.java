@@ -12,7 +12,6 @@ import org.bukkit.entity.Player;
  * Copyright @ UberDevo | All rights reserved
  */
 public class BadBoyChillerCrewCommand extends BaseCMD {
-    @Completer(name = "bbcc", aliases = {"badboychillercrew", "badboy"})
     @Command(name = "bbcc", aliases = {"badboychillercrew", "badboy"}, inGameOnly = true)
     @Override
     public void onCommand(CommandArgs cmd) {

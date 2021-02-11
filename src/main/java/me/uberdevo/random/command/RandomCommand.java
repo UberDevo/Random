@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
  */
 public class RandomCommand extends BaseCMD {
     // This is a simple Command :)
-    @Completer(name = "random", aliases = {"randomemems", "memes"})
     @Command(name = "random", aliases = {"randomemems", "memes"}, inGameOnly = true)
     @Override
     public void onCommand(CommandArgs cmd) {
