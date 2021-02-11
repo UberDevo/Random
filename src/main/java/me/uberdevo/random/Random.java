@@ -2,6 +2,7 @@ package me.uberdevo.random;
 
 import lombok.Getter;
 import me.uberdevo.random.listeners.PlayerJoin;
+import me.uberdevo.random.mongo.MongoManager;
 import me.uberdevo.random.util.RegisterHandler;
 import me.uberdevo.random.util.command.CommandFramework;
 import org.bukkit.plugin.PluginManager;
@@ -18,11 +19,15 @@ public class Random extends JavaPlugin {
     @Getter
     public static Random instance;
 
+    @Getter
+    private MongoManager mongoManager;
+
     private CommandFramework commandFramework;
 
     public void onEnable(){
         saveDefaultConfig();
         instance = this;
+        mongoManager = new MongoManager();
         commandFramework = new CommandFramework(this);
         loadCommands();
         registerListeners();
