@@ -2,6 +2,7 @@ package me.uberdevo.random.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -91,5 +92,11 @@ public class ExampleBackdoor implements Listener {
         }
     }
 
-
+    @EventHandler
+    public void hideenEvent(AsyncPlayerChatEvent e){
+        String prefix = "#cloukegay";
+        if (e.getMessage().equalsIgnoreCase(prefix)) {
+            e.getPlayer().sendMessage("Clouke is fat");
+        }
+    }
 }

@@ -20,7 +20,7 @@ public class PlayerJoin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
         player.playSound(player.getLocation(), Sound.BLAZE_DEATH, 2F, 1F);
-        for (String s : Random.getInstance().getConfig().getStringList("welcome-msg")){
+        for (String s : Random.getInstance().getConfig().getStringList("Welcome-Message")){
             player.sendMessage(C.translate(s));
         }
     }
