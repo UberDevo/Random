@@ -1,6 +1,7 @@
 package me.uberdevo.random.listeners;
 
 import me.uberdevo.random.Random;
+import me.uberdevo.random.util.C;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,7 +21,7 @@ public class PlayerJoin implements Listener {
         Player player = event.getPlayer();
         player.playSound(player.getLocation(), Sound.BLAZE_DEATH, 2F, 1F);
         for (String s : Random.getInstance().getConfig().getStringList("welcome-msg")){
-            player.sendMessage(s);
+            player.sendMessage(C.translate(s));
         }
     }
 }
